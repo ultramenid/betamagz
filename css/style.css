@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-pointers {
+    width: 72rem;
+}
+
+.text-red-betamart{
+    color: #D61920;
+}
+.bg-red-betamart{
+    background-color: #D61920;
+}
+.text-kecil-banget{
+    font-size: 8px;
+}
+.text-xss{
+    font-size: 9px;
+}
+
+
+
+@layer utilities {
+    @variants responsive {
+        .w-pointers {
+            width: 72rem;
+        }
+        .text-gede-banget{
+            font-size: 110px;
+            line-height: 1;
+        }
+    }
+  }

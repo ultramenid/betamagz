@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.output.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</title>
+</head>
+<body style="font-family: 'Encode Sans', sans-serif;" x-data="{nav:false}" class="font-light">
+    <div class="bg-red-betamart h-12 py-2 top-0 sticky z-20">
+        <div class="max-w-5xl mx-auto relative z-10 px-6  flex justify-between items-center" >
+          <a href="index.html"><img src="assets/betamagz.png" alt="betahita" class="sm:w-26 w-32"></a>
+          <div class=" sm:text-xl text-kecil-banget sm:flex space-x-2 items-center  hidden">
+            <a class="text-black text-center uppercase font-black">investigasi</a>
+            <div class="border border-r h-4 border-black"></div>
+            <a class="uppercase text-black">sawit kotor sesaki keranjang belanja kita</a>
+          </div>
+          <template x-if="!nav">
+              <svg @click="nav=!nav" xmlns="http://www.w3.org/2000/svg" class=" cursor-pointer h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+          </template>
+          <template x-if="nav">
+            <svg @click="nav=!nav"  xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </template>
+        </div>
+    </div>
+    <header style="font-family: 'Encode Sans', sans-serif;" class="overflow-y-auto">
+        <div class="fixed w-full min-h-screen z-20 bg-red-betamart inset-0 overflow-y-auto top-12 flex items-center" x-show="nav"
+            x-transition:enter="transition ease-in-out duration-150"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in-out duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            @click.outside="open = false"
+            @keyup.escape="nav=false"
+            x-cloak style="display: none !important">
+            <div class="max-w-5xl px-6 mx-auto flex flex-col  space-y-6">
+              
+              <div class="flex flex-col text-white border-b border-white sm:space-y-6 space-y-2  py-4">
+                <a href="index.html" class="sm:text-5xl text-normal font-semibold">Menelusuri Sawit Kotor di Daftar Belanja Kita</a>
+                <a href="index.html" class="sm:text-sm text-xs ">Banyak pihak tak terlalu peduli dengan ketelusuran bahan baku produknya, padahal dari temuan lapangan banyak produk berasal dari bahan baku yang kotor.
+                </a>
+              </div>
+              <div class="flex flex-col text-white border-b border-white sm:space-y-6 space-y-2  py-4">
+                <a href="index2.html" class="sm:text-5xl text-normal font-semibold">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+                <a href="index2.html" class="sm:text-sm text-xs ">Siapa saja yang mengambil untung paling banyak dalam rantai pasok kotor sawit? Konsumen dan alam adalah korban utamanya.
+                </a>
+              </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="max-w-5xl mx-auto px-4 mt-8 space-y-4" >
+        <div class=" sm:text-xl text-xss sm:hidden space-x-2 items-center  flex">
+            <a class="text-black text-center uppercase font-bold">investigasi</a>
+            <div class="border border-r h-4 border-black"></div>
+            <a class="uppercase text-black">sawit kotor sesaki keranjang belanja kita</a>
+        </div>
+        <h2 class="font-bold uppercase">Wawancara khusus</h2>
+        <h1 class="text-4xl font-bold">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</h1>
+        
+        <div class="flex space-x-2 text-gray-500 items-center mb-6 sm:text-normal text-sm mt-4">
+            <a>Penulis : Kennial laia </a>
+            <div class="border-r border-gray-500 h-3"></div>
+            <a class="text-xs">Kamis, 11 November 2021</a>
+        </div>
+        <div>
+            <img src="assets/Sudaryatmo.jpeg" alt="" class="w-full">
+            <p class="text-gray-500">Pengurus harian yayasan konsumen Indonesia.</p>    
+        </div>
+       <div class="flex justify-between space-x-8 mt-4">
+            <div class="sm:w-8/12 w-full flex flex-col space-y-4 font-light">
+                <p><a class="font-bold text-xl">Tak</a> banyak pelanggan tahu dari mana asal bahan baku barang belanjaannya berasal. Dengan cara apa didapat, atau berdampak apa?  Sementara fakta terkuak soal perkebunan kelapa sawit ilegal yang merambah kawasan hutan di Indonesia. Luasnya mencapai 3,35 juta hektare. 
+                </p>
+                <p>
+                    Hasil panen dan turunannya mengalir dari pabrik milik perusahaan perkebunan ke eksportir besar hingga perusahaan multinasional, yang memproduksi barang/kebutuhan sehari-hari. 
+                </p>
+                <p>
+                    Anggota Pengurus Harian Yayasan Lembaga Konsumen Indonesia (YLKI) Sudaryatmo menjelaskan bagaimana isu ketertelusuran sebuah produk—yang berkelindan dengan pelanggaran hak asasi manusia (HAM), konflik sosial, maupun perambahan kawasan hutan—belum menjadi perhatian utama konsumen dalam memilih produk di Indonesia, serta bagaimana edukasi dan regulasi penting untuk mendorong kesadaran pembeli dan pelaku usaha.
+                </p>
+                <p class="italic font-bold">
+                    Temuan kami melihat bahwa sawit-sawit yang dikelola secara tidak sah di dalam kawasan hutan mengalir ke perusahaan multinasional yang memproduksi barang kebutuhan sehari-hari, termasuk konsumen di Indonesia. Bagaimana pengamatan YLKI selama ini?
+                </p>
+                <p>
+                    Selama ini YLKI mendorong agar produk-produk yang mengandung turunan bahan baku kelapa sawit itu menginformasikan dan menjelaskan asal-usul produk produk tersebut. Salah satunya melalui mekanisme pengawasan pihak ketiga, dalam bentuk sertifikasi RSPO (Roundtable on Sustainable Palm Oil) dan ISPO (Indonesian Sustainable Palm Oil).
+                </p>
+                <p>
+                    Hal ini penting agar konsumen bisa memastikan produk yang dibeli itu dihasilkan dari perkebunan kelapa sawit dengan praktik ramah lingkungan dan tanpa konflik sosial. Saat ini ada beberapa brand yang mencantumkan sertifikasi tersebut. Artinya bahan baku kelapa sawit tidak hanya legal tapi memperhatikan aspek lingkungan dan sosial.
+                </p>
+                <p class="italic font-bold">
+                    Temuan kami perusahaan dengan sertifikasi RSPO dan ISPO juga melakukan pelanggaran…
+                </p>
+                <p>
+                    Justru kalau pihak ketiga dalam melakukan pengawasan serifikati itu berbeda fakta di lapangan, ini juga menyangkut reputasi dari sertifikasi itu. Konsumen agak sulit kalau harus memastikan pihak ketiga seritfikanya sesuai dengan fakta di lapangan. Jika memang ada kasus seperti itu, berarti sertifikasinya yang harus ditinjau ulang. Sebab, model garansi dari pihak ketiga inilah yang seharusnya memudahkan konsumen. Konsumen tidak mungkin mengecek sendiri soal rantai pasok hingga ke lapangan.
+                </p>
+                <p class="italic font-bold">
+                    Seberapa penting isu keberlanjutan dalam rantai pasok hingga produk akhir bagi konsumen di Indonesia?
+                </p>
+                <p>
+                    Preferensi konsumen di Indonesia tidak sejauh itu. asih lemah di isu HAM dan sosial. edukasi konsumen ketika beli produk kelapa sawit, memastikan ada informasi terkait traceability. Belom pernah ada baduan secara khusus belum.
+                </p>
+                
+                <p>
+                    Sejauh ini preferensi konsumen masih sensitive pada harga dan mutu, dibandingkan dengan isy yang berhubungan dengan lingkungan dan HAM.
+                </p>
+                
+                <p class="italic font-bold">
+                    Pernah ada pengaduan konsumen?
+                </p>
+                <p>
+                    Aduan secara khusus belum ada.
+                </p>
+                <p class="italic font-bold">
+                    Sejauh ini pengaduannya menyangkut sektor apa?
+                </p>
+                <p>
+                    Pengaduan yang diterima YLKI itu masih seputar jasa keuangan seperti bank, asuransi, dan pinjaman online. Lalu ada juga pengaduan terkait perumahan dan telekomunikasi.
+                </p>
+                <p class="italic font-bold">
+                    Sebenarnya kesadaran konsumen di Indonesia terkait isu keberlanjutan dalam rantai pasok itu sejauh apa?
+                </p>
+                <p>
+                    Kesadaran konsumen memang masih rendah. Masyarakat masih perlu edukasi. Tapi kesadaran masyarakat juga harus dibarengi dengan regulasi dari pemerintah. Misalnya, sertifikasi itu bukan voluntary tapi wajib untuk semua produk yang mengandung kelapa sawit. Informasinya ada di label produk, misalnya.
+                </p>
+                <p>
+                    Saat ini sebenarnya kesadaran itu mulai tumbuh, tapi baru di produk yang menyangkut minyak hewani. Kalau rantai pasok minyak nabati ilegal atau enggak, belum sampai ke situ. Ini juga tidak mudah buat ke konsumen, karena memahami rantai pasok juga tidak sesederhana itu.
+                </p>
+                <p class="italic font-bold">
+                    Mengapa isu keberlanjutan dalam rantai pasok produk belum menjadi arus utama?
+                </p>
+                <p>
+                    Selain consumer awareness dan perusahaan, regulasi dari pemerintah juga penting. Pertanyaan saat ini kan, pelaku usaha itu pragmatis. Kalau memang ingin ada informasi ketertelusuran, pihak bisnis juga bilang, regulasinya mana?
+                </p>
+                <p>
+                    Kedua, ada permintaan enggak? Kalo demand ada dan didorong oleh konsumen, tanpa regulasi pun pelaku usaha akan melakukan ini. Namun masalahnya, dua hal ini yang belum eksis.
+                </p>
+                <p class="italic font-bold">
+                    Bagaimana mendorong agar isu keberlanjutan dalam rantai pasok hingga produk akhir menjadi pembicaraan arus utama di kalangan konsumen?
+                </p>
+                <p>
+                    Harus ada kombinasi antara menciptakan permintaan produk ramah lingkungan dan regulasi. Kemudian kewajiban sertifikasi juga bisa didorong.
+                </p>
+                <p>
+                    Konsumen berhak mendapat informasi terkait asal-usul bahan baku produk yang dibelinya. Dan ini seharusnya bisa disediakan oleh pelaku usaha. 
+                </p>
+            </div>
+            <div class="w-4/12 sm:block hidden">
+                <div class="sticky top-12">
+                  <div class="border-b border-black">
+                    <a class="font-bold">Related Content</a>
+                  </div>
+                  <div class="mt-4 flex items-center space-x-2">
+                    <img class="w-40 h-16" src="assets/isi1.jpeg" alt="">
+                    <a href="index.html" class="hover:underline">Menelusuri Sawit Kotor di Daftar Belanja Kita</a>
+                  </div>
+                  <div class="mt-4 flex items-center space-x-2">
+                    <img class="w-40 h-16" src="assets/hero2.jpg" alt="">
+                    <a href="index2.html" class="hover:underline">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+                  </div>
+                </div>
+            </div>
+       </div>
+       <div class="sm:hidden block">
+        <a class="sm:hidden block font-bold">Related Content</a>
+        <div class="flex flex-row space-x-3 items-center sm:hidden border-b border-t py-2 border-black ">
+            <div class="flex items-center space-x-2 ">
+              <img src="assets/hero2.jpg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+              <a href="index2.html" class="text-xs">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="assets/isi1.jpeg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+              <a href="index3.html" class="text-xs">Menelusuri Sawit Kotor di Daftar Belanja Kita</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+</body>
+</html>

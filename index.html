@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.output.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Menelusuri Sawit Kotor di Daftar Belanja Kita</title>
+</head>
+<body x-data="{nav:false}">
+  <div class="bg-red-betamart h-12 py-2 top-0 sticky z-20">
+    <div class="max-w-6xl mx-auto relative z-10 px-6  flex justify-between items-center" >
+      <a href="index.html"><img src="assets/betamagz.png" alt="betahita" class="sm:w-26 w-32"></a>
+      <div class=" sm:text-xl text-kecil-banget sm:flex space-x-2 items-center  hidden">
+        <a class="text-black text-center uppercase font-black">investigasi</a>
+        <div class="border border-r h-4 border-black"></div>
+        <a class="uppercase text-black">sawit kotor sesaki keranjang belanja kita</a>
+      </div>
+      <template x-if="!nav">
+          <svg @click="nav=!nav" xmlns="http://www.w3.org/2000/svg" class=" cursor-pointer h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+      </template>
+      <template x-if="nav">
+        <svg @click="nav=!nav"  xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </template>
+    </div>
+  </div>
+  <header style="font-family: 'Encode Sans', sans-serif;" class="overflow-y-auto">
+      <div class="fixed w-full min-h-screen z-20 bg-red-betamart inset-0 overflow-y-auto top-12 flex items-center" x-show="nav"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @click.outside="open = false"
+        @keyup.escape="nav=false"
+        x-cloak style="display: none !important">
+        <div class="max-w-6xl px-6 mx-auto flex flex-col  space-y-6">
+          
+          <div class="flex flex-col text-white border-b border-white sm:space-y-6 space-y-2  py-4">
+            <a href="index2.html" class="sm:text-5xl text-normal font-semibold">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+            <a href="index2.html" class="sm:text-sm text-xs ">Siapa saja yang mengambil untung paling banyak dalam rantai pasok kotor sawit? Konsumen dan alam adalah korban utamanya.
+            </a>
+          </div>
+          <div class="flex flex-col text-white border-b border-white sm:space-y-6 space-y-2  py-4">
+                <a href="index3.html" class="sm:text-5xl text-normal font-semibold">Wawancara Khusus</a>
+                <a  href="index3.html"class="sm:text-sm text-xs ">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk
+                </a>
+          </div>
+        </div>
+        
+    </div>
+
+  </header>
+  <div class="h-screen relative"
+    style="
+    background-image: url('assets/hero-metamagz.png');
+    background-size: cover;
+    font-family: Montserrat;">
+        <div class="absolute inset-x-0 mt-4">
+          <div class=" sm:text-xl text-kecil-banget sm:hidden space-x-2 items-center  flex justify-center">
+            <a class="text-white text-center uppercase font-bold">investigasi</a>
+            <div class="border border-r h-4 border-white"></div>
+            <a class="uppercase text-white">sawit kotor sesaki keranjang belanja kita</a>
+          </div>
+        </div>
+        
+      <div class="relative z-10 max-w-7xl mx-auto " style="height: 50vh">
+        <div class="absolute inset-x-0 sm:bottom-40 bottom-8 h-16 sm:ml-40 ml-10 mr-4">
+            <p class="text-white sm:text-gede-banget text-4xl font-black transform sm:-rotate-6 -rotate-12" >
+                Menelusuri <a class="text-red-betamart">Sawit Kotor</a>  di Daftar Belanja Kita
+            </p>
+        </div>
+      </div>
+      <div class="absolute inset-x-0  bottom-8">
+        <div class="flex justify-center text-white ">
+          <div class="flex flex-col text-center px-4">
+            <a class="font-semibold ">Betamagz</a>
+            <a class="sm:text-sm text-kecil-banget">Penanggung Jawab : Sandy Indra Pratama | Penulis: Kennial Laia | Fotografer: Robby, Yudi Nofiandi</a>
+            <a class="sm:text-sm text-kecil-banget">Desain: Robby | Web Dev: Alichamdan </a>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+
+  <div class="max-w-5xl mx-auto px-4 mt-16" style="font-family: 'Encode Sans', sans-serif;">
+      <div class="sm:w-10/12 w-full mb-12">
+        <p class="leading-relaxed font-semibold text-xl" >
+          Banyak pihak tak terlalu peduli dengan ketelusuran bahan baku produknya, padahal dari temuan lapangan banyak produk berasal dari bahan baku yang kotor. 
+        </p>
+      </div>
+      <div class="flex space-x-2 text-gray-500 items-center mb-12 sm:text-normal text-sm">
+        <a>Penulis : Kennial laia </a>
+        <div class="border-r border-gray-500 h-3"></div>
+        <a class="text-xs">Kamis, 11 November 2021</a>
+      </div>
+  </div>
+
+    <!-- section 1 -->
+    <div class="max-w-5xl px-4 mx-auto flex space-x-8" style="font-family: 'Encode Sans', sans-serif;">
+      <div class="sm:w-8/12 w-full">
+        <div class="flex flex-col space-y-4 leading-relaxed font-light" >
+            <p class=""><a class="font-bold text-xl">TANGAN</a> Tirzah Jessica bergerak lincah menyisir rak-rak barang
+              dagangan di sebuah minimarket di Kalibata, Jakarta Selatan. Dalam
+              sekejap, keranjang hijau gelap yang ditenteng karyawan swasta berusia
+              32 tahun itu setengah sesak diisi barang belanja pilihannya. </p>
+            <p>Sampo Tresemme, pasta gigi Close-up, dan pewangi pakaian Molto. </p>
+            <p>
+              “Seperti orang lain, saya juga punya preferensi tersendiri ketika berbelanja, ya seperti
+              barang-barang ini,” kata Tirzah kepada Betahita, awal Oktober lalu. Dia mengaku
+              menggunakan merek tersebut selama bertahun-tahun.
+            </p>
+            <p>Namun, satu hal yang tidak diketahui Tirzah dan barangkali konsumen lainnya adalah ada kemungkinan bahwa produk favorit mereka berasal dari perkebunan kelapa sawit yang merambah kawasan hutan Indonesia. </p>
+            <p>Tirzah mengaku jarang menaruh perhatian soal bahan baku sebuah produk. Untuk diketahui, produk seperti sampo, sabun, pasta gigi, deterjen, pewangi pakaian hingga penganan seperti biskuit, es krim, coklat, cokelat, dan mi instan mengandung minyak sawit.</p>
+            
+        </div>
+      </div>
+      <div class="w-4/12 sm:block hidden">
+        <div class="sticky top-12">
+          <div class="border-b border-black">
+            <a class="font-bold">Related Content</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-22 h-16" src="assets/hero2.jpg" alt="">
+            <a href="index2.html" class="hover:underline">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-52 h-16" src="assets/Sudaryatmo.jpeg" alt="">
+            <a href="index3.html" class="hover:underline">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- image 1 -->
+    <div id="start" class="max-w-5xl mx-auto px-4 mb-4 mt-4">
+      <img src="assets/AlfaMart-min.png" alt="betahita" id="gambar" class="inline-block w-full mt-4 ">
+      <p class="max-w-5xl mx-auto  text-gray-500 sm:text-normal text-xs">Menelusuri Sawit Kotor di Daftar Belanja Kita. BETAHITA/Robby</p>
+    </div>
+
+
+    <!-- section 2  -->
+    <div class="max-w-5xl px-4 mx-auto flex space-x-8" style="font-family: 'Encode Sans', sans-serif;">
+      <div class="sm:w-8/12 w-full">
+        <div class="flex flex-col space-y-4 leading-relaxed font-light" >
+          <p>Penelusuran tim kolaborasi riset dan peliputan <a class="italic">Betahita, Tempo, dan Mongabay
+            Indonesia</a>, peneliti independen, dan Auriga Nusantara menemukan, rantai pasok
+            kelapa sawit dan produk turunannya tercemar oleh hasil panen dari perkebunan yang
+            dikelola secara ilegal atau berada di dalam kawasan hutan Indonesia, khususnya di
+            Provinsi Riau dan Kalimantan Barat.
+          </p>
+          <p>
+              Temuan juga mengungkap bahwa perusahaan internasional turut menerima pasokan
+              (langsung maupun tidak langsung) dari perusahaan yang mengembangkan atau
+              menerima buah sawit dan turunannya yang berasal dari dalam kawasan hutan.
+          </p>
+          <p>
+              Salah satu perusahaan yang menerima dan mengolah kelapa sawit dari dalam
+              kawasan hutan adalah PT Sumbar Andalas Kencana. Nama perusahaan ini tercatat
+              dalam daftar pabrik pemasok Unilever, yang merupakan induk dari Unilever
+              Indonesia yang membuat produk seperti sampo dan pasta gigi.
+          </p>
+          <p >
+              Temuan lapangan mengungkap, PT Sumbar Andalas Kencana diduga menerima dan
+              mengolah hasil panen buah sawit dari dalam hutan lindung Bukit Betabuh di
+              Kabupaten Kuantan Singingi, Riau. Kawasan lindung ini memiliki luas 42.500
+              hektare, dan sekitar 30.000 hektare telah dikonversi menjadi kebun sawit.
+          </p>
+            <p>
+              “Hasil panen biasanya kami bawa ke sejumlah agen/pengepul di sekitar sini,” kata
+              salah satu pemanen yang kami temui Agustus lalu. Salah satu pengepul itu bernama
+              Yusman.
+            </p>
+            <p>
+              Dari rumah pengepul, tim kolaborasi mengikuti truk dengan nomor polisi AA 1891
+              JH berisi buah sawit yang dipanen dari dalam kawasan hutan. Perjalanan itu melewati
+              perbatasan Kabupaten Kuantan Singingi dan Kabupaten Dharmasraya, Sumatra
+              Barat. Truk yang kami ikuti terlihat mengantre dan masuk barisan truk tandan buah
+              segar di pabrik minyak PT Sumbar Andalas Kencana.
+            </p>
+            <p>
+              Cargill dan ADM Global merupakan dua eksportir besar yang mencatat PT Sumbar
+              Andalas Kencana dalam daftar pemasok mereka.
+            </p>
+            
+            <div class="sm:hidden block">
+              <a class="sm:hidden block font-bold">Related Content</a>
+              <div class="flex flex-row space-x-3 items-center sm:hidden border-b border-t py-2 border-black ">
+                  <div class="flex items-center space-x-2 ">
+                    <img src="assets/hero2.jpg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+                    <a href="index2.html" class="text-xs">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <img src="assets/Sudaryatmo.jpeg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+                    <a href="index3.html" class="text-xs">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+                  </div>
+              </div>
+            </div>
+            
+            <p>Selain itu, beberapa pembeli akhir turut mencatat PT Sumbar Andalas Kencana
+              sebagai pabrik pemasok adalah Unilever, PepsiCo, Colgate, Nestle, dan Danone.</p>
+            <p>Unilever, Danone, Nestle, dan PepsiCo juga menerima produk sawit dari perusahaan
+              lain bernama PT Tasma Puja yang diduga mengembangkan kebun dan menerima
+              hasil panen di dalam kawasan hutan di Riau.
+            </p>
+            <p>
+              PT Tasma Puja berada di Kecamatan Batang Cenaku, Kabupaten Indragiri Hulu. Dari
+              hasil analisis tim kolaborasi, peta izin perusahaan ini memangkas kawasan hutan
+              produksi yang dapat diproduksi dan hutan produksi terbatas di Desa Anak Talang dan
+              Desa Kepayang Sari. Perusahaan juga membangun pabrik minyak sawit di Desa
+              Kepayang Sari.
+            </p>
+            
+        </div>
+      </div>
+      <div class="w-4/12 sm:block hidden">
+        <div class="sticky top-12">
+          <div class="border-b border-black">
+            <a class="font-bold">Related Content</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-22 h-16" src="assets/hero2.jpg" alt="">
+            <a href="index2.html" class="hover:underline">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-52 h-16" src="assets/Sudaryatmo.jpeg" alt="">
+            <a href="index3.html" class="hover:underline">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- img 2 -->
+    <div id="start" class="max-w-5xl mx-auto px-4 mb-4 mt-4 flex space-x-4">
+      <div>
+        <img src="assets/Milo-min.png" alt="betahita" id="gambar" class="inline-block w-full mt-4 ">
+        <p class="max-w-5xl mx-auto  text-gray-500 sm:text-normal text-xs">Menelusuri Sawit Kotor di Daftar Belanja Kita. BETAHITA/Robby</p>
+      </div>
+      <div>
+        <img src="assets/Ilustrasi-Nestle-min.png" alt="betahita" id="gambar" class="inline-block w-full mt-4 ">
+        <p class="max-w-5xl mx-auto  text-gray-500 sm:text-normal text-xs">Menelusuri Sawit Kotor di Daftar Belanja Kita. BETAHITA/Robby</p>
+      </div>
+    </div>
+
+    <!-- section 3 -->
+    <div class="max-w-5xl px-4 mx-auto flex space-x-8" style="font-family: 'Encode Sans', sans-serif;">
+      <div class="sm:w-8/12 w-full">
+        <div class="flex flex-col space-y-4 leading-relaxed font-light" >
+            
+            <p>
+              “Hasil panen biasanya kami bawa ke sejumlah agen/pengepul di sekitar sini,” kata
+              salah satu pemanen yang kami temui Agustus lalu. Salah satu pengepul itu bernama
+              Yusman.
+            </p>
+            <p>
+              Dari rumah pengepul, tim kolaborasi mengikuti truk dengan nomor polisi AA 1891
+              JH berisi buah sawit yang dipanen dari dalam kawasan hutan. Perjalanan itu melewati
+              perbatasan Kabupaten Kuantan Singingi dan Kabupaten Dharmasraya, Sumatra
+              Barat. Truk yang kami ikuti terlihat mengantre dan masuk barisan truk tandan buah
+              segar di pabrik minyak PT Sumbar Andalas Kencana.
+            </p>
+            <p>
+              Cargill dan ADM Global merupakan dua eksportir besar yang mencatat PT Sumbar
+              Andalas Kencana dalam daftar pemasok mereka.
+            </p>
+            <p>Selain itu, beberapa pembeli akhir turut mencatat PT Sumbar Andalas Kencana
+              sebagai pabrik pemasok adalah Unilever, PepsiCo, Colgate, Nestle, dan Danone.</p>
+            <p>Unilever, Danone, Nestle, dan PepsiCo juga menerima produk sawit dari perusahaan
+              lain bernama PT Tasma Puja yang diduga mengembangkan kebun dan menerima
+              hasil panen di dalam kawasan hutan di Riau.
+            </p>
+            <p>
+              PT Tasma Puja berada di Kecamatan Batang Cenaku, Kabupaten Indragiri Hulu. Dari
+              hasil analisis tim kolaborasi, peta izin perusahaan ini memangkas kawasan hutan
+              produksi yang dapat diproduksi dan hutan produksi terbatas di Desa Anak Talang dan
+              Desa Kepayang Sari. Perusahaan juga membangun pabrik minyak sawit di Desa
+              Kepayang Sari.
+            </p>
+            <p>
+              Hasil pengecekan lapangan pada 28 Agustus hingga 24 September 2021
+              menunjukkan hasil panen dari areal kebun perusahaan—yang berada di dalam
+
+              kawasan hutan—ke pabrik minyak sawit PT Tasma Puja Batang Cenaku. Selain itu,
+              pabrik ini juga menerima pasokan tandan buah segar (TBS) dari kebun-kebun di luar
+              IUP perusahaan. TBS-TBS tersebut dipanen dari kawasan hutan produksi terbatas
+              (HPT) dan hutan lindung Bukit Betabuh.
+            </p>
+          
+            <p>
+              PT Tasma Puja juga tercatat dalam daftar pabrik pemasok eksportir besar lainnya yakni  PT Inti Benua Perkasatama (Musim Mas Group), PT Ivo Mas Tunggal (GAR/Sinar Mas), IFFCO (via PT Inti Benua Perkasatama dan PT Ivo Mas Tunggal), serta AAK. PT Tasma Puja juga terdaftar dalam rantai pasok Hersjey dan P&G. 
+            </p>
+            <p>
+              Aktivitas ilegal serupa terjadi di dalam hutan lindung Kalimantan Barat, tepatnya di Kecamatan Teluk Pakedai, Kabupaten Kubu Raya. 
+            </p>
+            <p>
+              Penelusuran tim kolaborasi menemukan bahwa PT Rezeki Kencana, yang beroperasi di area tersebut, diduga mengembangkan perkebunan serta menerima dan mengolah hasil panen dari dalam kawasan hutan di Kecamatan Teluk Pakedai. 
+            </p>
+            <p>
+              PT Rezeki Kencana merupakan anak perusahaan dari Tianjing Julong, sebuah perusahaan minyak kelapa sawit besar di Cina. PT Rezeki Kencana memiliki area konsesi seluas 7.656,31 hektare (HGU dan IUP). 
+            </p>
+            <p>
+              Di luar luas tersebut, terdapat indikasi areal perkebunan kelapa sawit seluas 1.672,89 hektare, termasuk di luar izin Hak Guna Usaha (HGU) perusahaan, yang diduga masih satu kesatuan dengan kebun PT Rezeki Kencana. Jika ditampalkan dengan peta kawasan hutan, areal ini juga berada di atas hutan lindung (HL). 
+            </p>
+            <p>
+              Penelusuran lapangan pada September lalu menemukan bahwa tanaman sawit di area hutan lindung tersebut dikelola PT Rezeki Kencana. Beberapa aktivitas terjadi di dalam kawasan hutan lindung termasuk pemanenan dan pembukaan jalan kebun. 
+            </p>
+            <p>
+              Sidar, bukan nama sebenarnya, salah satu supir angkutan sawit mengaku rutin mengangkut tandan buah segar dari dalam area lindung dan mengantarkannya  ke pabrik milik PT Rezeki Kencana yang terletak di tepi sungai di Desa Sungai Deras. Dia juga menerima pembayaran angkutan setiap bulan. 
+            </p>
+            <p>
+              Kami mengikuti kendaraan yang dikemudikan Sidar. Mobil pick up tersebut mengantre tak jauh dari pintu masuk pabrik. Para kreni dengan cekatan mendata hasil panen dan melakukan penimbangan. Setelah itu dibawa ke pabrik. 
+            </p>
+            <p>
+              Penelusuran kami, PT Rezeki Kencana merupakan pemasok untuk eksportir besar di Indonesia termasuk Wilmar International, Cargill, Fuji Oil Holdings, dan AAK. Produk olahan dari eksportir tersebut mengalir ke perusahaan seperti Mondelez International, Hershey, dan Danone turut mencatat perusahaan ini di dalam daftar pemasok mereka.
+            </p>
+          <div class="flex justify-center">
+            <span class="inline-block w-3 h-3 mr-1 bg-black rounded-full"></span>
+            <span class="inline-block w-3 h-3 mr-1 bg-black rounded-full"></span>
+            <span class="inline-block w-3 h-3 mr-1 bg-black rounded-full"></span>
+          </div>
+        </div>
+      </div>
+      <div class="w-4/12 sm:block hidden">
+        <div class="sticky top-12">
+          <div class="border-b border-black">
+            <a class="font-bold">Related Content</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-22 h-16" src="assets/hero2.jpg" alt="">
+            <a href="index2.html" class="hover:underline">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-52 h-16" src="assets/Sudaryatmo.jpeg" alt="">
+            <a href="index3.html" class="hover:underline">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- large image -->
+    <img src="assets/isi1.jpeg" alt="betahita" id="gambar" class="inline-block w-full mt-4 ">
+    <p class="max-w-5xl mx-auto  px-4 text-gray-500 sm:text-normal text-xs">Menelusuri Sawit Kotor di Daftar Belanja Kita. BETAHITA/Robby</p>
+    
+
+    <!-- section 4 -->
+    <div class="max-w-5xl px-4 mx-auto flex space-x-8 mt-4" style="font-family: 'Encode Sans', sans-serif;">
+      <div class="sm:w-8/12 w-full">
+        <div class="flex flex-col space-y-4 leading-relaxed font-light">
+
+          <p class="">
+            <a class="font-bold">Undang-Undang</a> Nomor 18 Tahun 2013 tentang Pencegahan dan Pemberantasan Perusakan Hutan Pasal 17 ayat (2) melarang adanya kegiatan perkebunan tanpa izin Menteri Lingkungan Hidup dan Kehutanan di dalam kawasan hutan.
+          </p>
+          <p>
+            Pasal yang sama juga melarang kegiatan pengolahan, pembelian, pengangkutan, pemasaran, dan penjualan hasil kebun di dalam kawasan hutan. Badan atau korporasi yang melanggar aturan ini dapat dikenai sanksi pidana maupun sanksi administratif berupa paksaan pemerintah, uang paksa, atau pencabutan izin. 
+          </p>
+          <p>
+            Berdasarkan penelusuran dan temuan di lapangan, ada indikasi kuat bahwa perusahaan-perusahaan perkebunan kelapa sawit di dalam tulisan ini telah melanggar aturan tersebut. 
+          </p>
+          <p>
+            Pelanggaran juga dilakukan oleh eksportir dan pembeli akhir yang menerima produk kelapa sawit dari ketiga perusahaan tersebut. Pasalnya, hampir semua perusahaan raksasa itu memiliki komitmen keberlanjutan ataupun mengadopsi kebijakan Nol Deforestasi, Nol Gambut, Nol Eksploitasi (NDPE). 
+          </p>
+          <p>
+            Pelanggaran juga dilakukan oleh eksportir dan pembeli akhir yang menerima produk kelapa sawit dari ketiga perusahaan tersebut. Pasalnya, hampir semua perusahaan raksasa itu memiliki komitmen keberlanjutan ataupun mengadopsi kebijakan Nol Deforestasi, Nol Gambut, Nol Eksploitasi (NDPE). 
+          </p>
+          <p>
+            Sustainable Sourcing Assistant Manager Unilever Indonesia Lana Kristanto mengatakan, Unilever tidak memiliki hubungan bisnis langsung dengan perusahaan di dalam laporan ini. “Namun ada kemungkinan mereka masuk ke rantai pasokan kami melalui pemasok kami. Kami akan memeriksa informasi yang diberikan dengan pemasok langsung kami yang relevan,” kata Lana dalam jawaban tertulis, 16 Oktober 2021. 
+          </p>
+          <p>
+            Molly Haragan, Responsible Sourcing Manager di Hershey, mengatakan pihaknya 
+          </p>
+          <p>sedang memutakhirkan laporan daftar pabrik sawit periode Januari – Juni. “Walau belum final, sepertinya perusahaan tersebut masih menjadi bagian dari pemasok langsung kami. Komunikasi dengan pemasok langsung kami akan menentukan tindakan apa yang dilakukan selanjutnya,” kata Haragan. 
+          </p>
+          <div class="sm:hidden block">
+            <a class="sm:hidden block font-bold">Related Content</a>
+            <div class="flex flex-row space-x-3 items-center sm:hidden border-b border-t py-2 border-black ">
+                <div class="flex items-center space-x-2 ">
+                  <img src="assets/hero2.jpg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+                  <a class="text-xs">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <img src="assets/Sudaryatmo.jpeg" class="w-16" alt="Menelusuri Sawit Kotor di Daftar Belanja Kita">
+                  <a class="text-xs">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+                </div>
+            </div>
+          </div>
+          <p>
+            Anne Sueur, One Health & One Planet Communications Senior Manager di Danone, mengatakan pihaknya telah mengaktifkan proses pengaduan dan mengidentifikasi pemasok tingkat 1 yang terhubung dengan pabrik kelapa sawit di dalam laporan ini.
+          </p>
+          <p>
+            Menurut Sueur, komunikasi dengan pemasok langsung Danone sedang berlangsung. “Jika penyelidikan ini mengonfirmasi bahwa ketiga pabrik ini tidak mematuhi kebijakan minyak sawit kami, maka secara resmi kami akan meminta pemasok langsung kami, terlepas dari hubungan mereka dengan pabrik, untuk menangguhkan mereka sampai ada kemajuan nyata menuju kepatuhan terhadap kebijakan dan prinsip kami.” 
+          </p>
+          <p>
+            Tirzah juga konsumen luas lain mungkin belum punya kewajiban memilih produk hijau turunan dari buah sawit. Sebab mereka belum tentu punya pengetahuan. Penulisan, advokasi juga kampanye yang menyebarkan pengetahuan akan itu, tidak melulu berarti harus diartikan mengganggu bisnis produk dari hasil sawit kotor. 
+          </p>
+          <p>
+            Kesadaran konsumen perlu terus ditumbuhkan. Dimulai dari ketelusuran produknya. Agar semua bisa mendorong praktek hijau di semua lini konsumsi. Masih banyak Tirzah lain yang perlu dibekali pengetahuan. Masih banyak sawit kotor di daftar belanja kita. 
+            <span class="inline-block w-3 h-3 mr-2 bg-red-600 rounded-full"></span>
+
+          </p>
+    </div>
+      </div>
+      <div class="w-4/12 sm:block hidden ">
+        <div class="sticky top-12">
+          <div class="border-b border-black">
+            <a class="font-bold">Related Content</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-32 h-16" src="assets/hero2.jpg" alt="">
+            <a href="index2.html" class="hover:underline">Para Pemanfaat di Balik Hutan yang Dibabat</a>
+          </div>
+          <div class="mt-4 flex items-center space-x-2">
+            <img class="w-52 h-16" src="assets/Sudaryatmo.jpeg" alt="">
+            <a href="index3.html" class="hover:underline">YLKI: Konsumen Berhak Tahu Soal Asal-Usul Produk</a>
+          </div>  
+        </div>
+      </div>
+    </div>
+     
+    <div class="max-w-4xl px-4 mx-auto border-t border-black py-2 mt-4 mb-12" style="font-family: 'Encode Sans', sans-serif;">
+      <p class="italic text-center max-w-2xl mx-auto text-gray-500">
+        Tim kolaborasi telah menghubungi manajemen PT Sumbar Rezeki Kencana, PT Tasma Puja, dan PT Rezeki Kencana namun tidak mendapatkan tanggapan hingga artikel ini naik. 
+      </p>
+    </div>
+</body>
+</html>

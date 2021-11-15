@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  },
+  "scripts": {
+    "dev": "tailwindcss -i css/style.css -o css/style.output.css",
+    "prod": "postcss  css/style.css -o css/style.output.css",
+    "cz": "git-cz",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "cssnano": "^5.0.8",
+    "postcss-cli": "^8.3.1"
+  }
+}
