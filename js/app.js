@@ -44,14 +44,14 @@ scene.on("update", e => {
 });
 
 scenemobile.on("enter", e => {
-  videomobile.muted = true;
-  videomobile.playsinline = true;
-  videomobile.play();
+  // videomobile.muted = true;
+  // videomobile.playsinline = true;
+  // videomobile.play();
   // // scrollpos = e.scrollPos / 900;
-  // setInterval(() => {
-  //   // delay += (scrollpos - delay)  + 0.01;
-  //   videomobile.currentTime += 0.2;
-  // }, 120);
+  setInterval(() => {
+    // delay += (scrollpos - delay)  + 0.01;
+    videomobile.currentTime += 0.2;
+  }, 120);
 });
 
 
