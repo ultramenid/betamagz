@@ -45,6 +45,7 @@ scene.on("update", e => {
 
 scenemobile.on("enter", e => {
   videomobile.muted = true;
+  videomobile.playsinline = true;
   videomobile.play();
   // // scrollpos = e.scrollPos / 900;
   // setInterval(() => {
