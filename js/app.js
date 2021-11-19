@@ -22,7 +22,7 @@ let scene = new ScrollMagic.Scene({
 
   //Scenes
 let scenemobile = new ScrollMagic.Scene({
-  duration: 1000,
+  duration: 2000,
   triggerElement: intromobile,
   triggerHook: 0
 })
@@ -44,11 +44,13 @@ scene.on("update", e => {
 });
 
 scenemobile.on("enter", e => {
-  // scrollpos = e.scrollPos / 900;
-  setInterval(() => {
-    // delay += (scrollpos - delay)  + 0.01;
-    videomobile.currentTime += 0.2;
-  }, 120);
+  videomobile.muted = true;
+  videomobile.play();
+  // // scrollpos = e.scrollPos / 900;
+  // setInterval(() => {
+  //   // delay += (scrollpos - delay)  + 0.01;
+  //   videomobile.currentTime += 0.2;
+  // }, 120);
 });
 
 
