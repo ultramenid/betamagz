@@ -15,7 +15,7 @@
   <div id="loader" class=" px-6 fixed w-full min-h-screen z-30 bg-black mx-auto inset-0  top-0 flex items-center justify-center">
     <img src="assets/betamagz.png" alt="betahita" class="animate-pulse">
   </div>
-  <div id="content" class="hidden">
+  <div id="content" >
     <div class="bg-red-betamart h-12 py-2 top-0 sticky z-20">
       <div class="max-w-5xl mx-auto relative z-10 px-6  flex justify-between items-center" >
         <a href="index.html"><img src="assets/betamagz.png" alt="betahita" class="sm:w-26 w-32"></a>
@@ -232,9 +232,11 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
+    $('#content').hide();
+    
     $(window).on('load', function(){
-      $('#loader').fadeOut(50);
-      $('#content').fadeIn(1000);
+      $('#loader').hide();
+      $('#content').show();
     });
     $(document).ready(function(e) {
       $('img[usemap]').rwdImageMaps();
