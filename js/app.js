@@ -56,7 +56,9 @@ $('#content').hide();
         video.currentTime = delay;
       }, 80);
 
+      $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+      });
+
     });
-    $(document).ready(function(e) {
-      $('img[usemap]').rwdImageMaps();
-    });
+    
